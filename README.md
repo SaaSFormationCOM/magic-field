@@ -103,6 +103,12 @@ Now you can just use the new Field based class the same way as the StandardField
 $addedInteger = (new MyConverterField(1)->addOneToInteger(); // 2
 ```
 
+## Users of stratdes/vo
+
+Users of [stratdes/vo](https://github.com/stratdes/vo) may find
+[saasformation/vo-magic-field-bridge](https://github.com/SaaSFormationCOM/vo-magic-field-bridge) useful to
+add converters for single VO's and collections.
+
 ## Issues
 
 If you find some issue in the library, please feel free to open an issue here on Github.
