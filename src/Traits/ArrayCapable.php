@@ -24,4 +24,19 @@ trait ArrayCapable
 
         return $converted;
     }
+
+    /**
+     * @return string|null
+     * @throws InvalidConversionException
+     */
+    public function arrayOrNull(): ?string
+    {
+        $converted = $this->value;
+
+        if(!is_null($converted)) {
+            $converted = $this->array();
+        }
+
+        return $converted;
+    }
 }

@@ -532,6 +532,7 @@ class StandardFieldTest extends TestCase
      * @test
      * @dataProvider invalidArrayDataProvider
      * @param mixed $value
+     * @param string $type
      * @return void
      * @throws InvalidConversionException
      */
@@ -545,5 +546,105 @@ class StandardFieldTest extends TestCase
         (new StandardField($value))->array();
 
         // Assert
+    }
+
+    /**
+     * @test
+     * @return void
+     */
+    public function checkStringOrNullReturnNullWhenNullIsProvided(): void
+    {
+        // Arrange
+        $value = null;
+
+        // Act
+        $result = (new StandardField($value))->stringOrNull();
+
+        // Assert
+        $this->assertNull($result);
+    }
+
+    /**
+     * @test
+     * @return void
+     * @throws InvalidConversionException
+     */
+    public function checkBooleanOrNullReturnNullWhenNullIsProvided(): void
+    {
+        // Arrange
+        $value = null;
+
+        // Act
+        $result = (new StandardField($value))->booleanOrNull();
+
+        // Assert
+        $this->assertNull($result);
+    }
+
+    /**
+     * @test
+     * @return void
+     * @throws InvalidConversionException
+     */
+    public function checkDateTimeOrNullReturnNullWhenNullIsProvided(): void
+    {
+        // Arrange
+        $value = null;
+
+        // Act
+        $result = (new StandardField($value))->datetimeOrNull();
+
+        // Assert
+        $this->assertNull($result);
+    }
+
+    /**
+     * @test
+     * @return void
+     */
+    public function checkIntegerOrNullReturnNullWhenNullIsProvided(): void
+    {
+        // Arrange
+        $value = null;
+
+        // Act
+        $result = (new StandardField($value))->integerOrNull();
+
+        // Assert
+        $this->assertNull($result);
+    }
+
+    /**
+     * @test
+     * @return void
+     * @throws InvalidConversionException
+     */
+    public function checkFloatOrNullReturnNullWhenNullIsProvided(): void
+    {
+        // Arrange
+        $value = null;
+
+        // Act
+        $result = (new StandardField($value))->floatOrNull();
+
+        // Assert
+        $this->assertNull($result);
+    }
+
+    /**
+     * @test
+     * @return void
+     * @throws InvalidConversionException
+     */
+    public function checkArrayOrNullReturnNullWhenNullIsProvided(): void
+    {
+        // Arrange
+        $value = null;
+
+        // Act
+        $result = (new StandardField($value))->arrayOrNull();
+
+        // Assert
+        $this->assertNull($result);
     }
 }

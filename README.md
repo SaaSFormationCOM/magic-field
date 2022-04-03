@@ -35,7 +35,7 @@ Now, you can do the following:
 ```php
 $name = (new StandardField($data['name']))->string();
 $birthdate = (new StandardField($data['birthdate']))->datetime();
-$height = (new StandardField($data['height']))->int();
+$height = (new StandardField($data['height']))->integer();
 $alive = (new StandardField($data['alive']))->boolean();
 $highSchoolQualificationsAverage = (new StandardField($data['highSchoolQualificationsAverage']))->float();
 $professions = (new StandardField($data['professions']))->array();
@@ -61,7 +61,7 @@ class Controller extends BaseController {
             new CreatePersonCommand(
                 $this->field('data.attributes.name')->string(),
                 $this->field('data.attributes.birthdate')->datetime(),
-                $this->field('data.attributes.height')->height(),
+                $this->field('data.attributes.height')->integer(),
                 $this->field('data.attributes.alive')->boolean(),
                 $this->field('data.attributes.highSchoolQualificationsAverage')->float(),
                 $this->field('data.attributes.professions')->array(),

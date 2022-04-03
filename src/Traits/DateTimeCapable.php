@@ -31,4 +31,19 @@ trait DateTimeCapable
 
         return $converted;
     }
+
+    /**
+     * @return string|null
+     * @throws InvalidConversionException
+     */
+    public function datetimeOrNull(): ?string
+    {
+        $converted = $this->value;
+
+        if(!is_null($converted)) {
+            $converted = $this->datetime();
+        }
+
+        return $converted;
+    }
 }

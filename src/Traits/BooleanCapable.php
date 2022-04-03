@@ -38,4 +38,19 @@ trait BooleanCapable
 
         return $converted;
     }
+
+    /**
+     * @return string|null
+     * @throws InvalidConversionException
+     */
+    public function booleanOrNull(): ?string
+    {
+        $converted = $this->value;
+
+        if(!is_null($converted)) {
+            $converted = $this->boolean();
+        }
+
+        return $converted;
+    }
 }

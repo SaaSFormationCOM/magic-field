@@ -23,4 +23,19 @@ trait FloatCapable
 
         return $converted;
     }
+
+    /**
+     * @return string|null
+     * @throws InvalidConversionException
+     */
+    public function floatOrNull(): ?string
+    {
+        $converted = $this->value;
+
+        if(!is_null($converted)) {
+            $converted = $this->float();
+        }
+
+        return $converted;
+    }
 }

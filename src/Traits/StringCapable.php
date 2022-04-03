@@ -22,4 +22,15 @@ trait StringCapable
 
         return $convertedValue;
     }
+
+    public function stringOrNull(): ?string
+    {
+        $converted = $this->value;
+
+        if(!is_null($converted)) {
+            $converted = $this->string();
+        }
+
+        return $converted;
+    }
 }

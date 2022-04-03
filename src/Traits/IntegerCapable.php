@@ -18,4 +18,15 @@ trait IntegerCapable
 
         return $converted;
     }
+
+    public function integerOrNull(): ?string
+    {
+        $converted = $this->value;
+
+        if(!is_null($converted)) {
+            $converted = $this->integer();
+        }
+
+        return $converted;
+    }
 }
