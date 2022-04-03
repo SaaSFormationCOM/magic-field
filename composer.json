@@ -1,0 +1,21 @@
+{
+    "name": "saasformation/field-magic",
+    "description": "FieldMagic is a library to convert mixed values into desired typed values -when doable.",
+    "type": "library",
+    "license": "MIT",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "SaaSFormation\\Field\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "SaaSFormation",
+            "email": "info@saasformation.com"
+        }
+    ],
+    "require": {}
+}
