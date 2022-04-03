@@ -1,4 +1,4 @@
-# FieldMagic
+# MagicField
 
 FieldMagic is a library to convert mixed values into desired typed values -when doable.
 
@@ -102,3 +102,7 @@ Now you can just use the new Field based class the same way as the StandardField
 ```php
 $addedInteger = (new MyConverterField(1)->addOneToInteger(); // 2
 ```
+
+## Issues
+
+If you find some issue in the library, please feel free to open an issue here on Github.

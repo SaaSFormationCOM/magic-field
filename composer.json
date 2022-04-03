@@ -1,6 +1,6 @@
 {
-    "name": "saasformation/field-magic",
-    "description": "FieldMagic is a library to convert mixed values into desired typed values -when doable.",
+    "name": "saasformation/magic-field",
+    "description": "MagicField is a library to convert mixed values into desired typed values -when doable.",
     "type": "library",
     "license": "MIT",
     "require-dev": {
