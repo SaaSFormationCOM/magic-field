@@ -569,6 +569,23 @@ class StandardFieldTest extends TestCase
      * @return void
      * @throws InvalidConversionException
      */
+    public function checkBooleanOrNullReturnTrueWhenTrueIsProvided(): void
+    {
+        // Arrange
+        $value = true;
+
+        // Act
+        $result = (new StandardField($value))->booleanOrNull();
+
+        // Assert
+        $this->assertTrue($result);
+    }
+
+    /**
+     * @test
+     * @return void
+     * @throws InvalidConversionException
+     */
     public function checkBooleanOrNullReturnNullWhenNullIsProvided(): void
     {
         // Arrange

@@ -43,7 +43,7 @@ trait BooleanCapable
      * @return string|null
      * @throws InvalidConversionException
      */
-    public function booleanOrNull(): ?string
+    public function booleanOrNull(): ?bool
     {
         $converted = $this->value;
 
