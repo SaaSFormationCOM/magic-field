@@ -26,10 +26,10 @@ trait ArrayCapable
     }
 
     /**
-     * @return string|null
+     * @return array|null
      * @throws InvalidConversionException
      */
-    public function arrayOrNull(): ?string
+    public function arrayOrNull(): ?array
     {
         $converted = $this->value;
 
