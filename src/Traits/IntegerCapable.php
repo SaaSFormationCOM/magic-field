@@ -19,7 +19,7 @@ trait IntegerCapable
         return $converted;
     }
 
-    public function integerOrNull(): ?string
+    public function integerOrNull(): ?int
     {
         $converted = $this->value;
 
